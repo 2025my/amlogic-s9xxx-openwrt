@@ -13,7 +13,7 @@ inputs:
   openwrt_board:
     description: "Select device board."
     required: false
-    default: "all"
+    default: "s905l3a"
   kernel_repo:
     description: "Select kernel repository."
     required: false
