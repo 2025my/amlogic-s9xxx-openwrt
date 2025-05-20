@@ -19,17 +19,17 @@ inputs:
     required: false
     default: "ophub/kernel"
   kernel_usage:
-    description: "Set the tags of the stable kernel."
+    description: "flippy"
     required: false
     default: "stable"
   openwrt_kernel:
     description: "Select kernel version."
     required: false
-    default: "6.1.y_6.12.y"
+    default: "5.15.158"
   auto_kernel:
     description: "Auto use the latest kernel."
     required: false
-    default: "true"
+    default: "false"
   openwrt_size:
     description: "Set the rootfs size(Unit: MiB)."
     required: false
