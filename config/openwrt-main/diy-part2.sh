@@ -17,6 +17,17 @@ echo "DISTRIB_SOURCECODE='official'" >>package/base-files/files/etc/openwrt_rele
 
 # Modify default IP（FROM 192.168.1.1 CHANGE TO 192.168.31.4）
 # sed -i 's/192.168.1.1/192.168.31.4/g' package/base-files/files/bin/config_generate
+
+# Set default hostname and timezone to China
+sed -i "s/hostname='OpenWrt'/hostname='OpenWrt-China'/g" package/base-files/files/bin/config_generate
+sed -i "s/timezone='UTC'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
+sed -i "/timezone='CST-8'/a\ \ \ \ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
+
+# Optional: use domestic NTP servers
+sed -i "s/0.openwrt.pool.ntp.org/ntp.aliyun.com/g" package/base-files/files/bin/config_generate
+sed -i "s/1.openwrt.pool.ntp.org/cn.ntp.org.cn/g" package/base-files/files/bin/config_generate
+sed -i "s/2.openwrt.pool.ntp.org/time1.cloud.tencent.com/g" package/base-files/files/bin/config_generate
+
 #
 # ------------------------------- Main source ends -------------------------------
 
