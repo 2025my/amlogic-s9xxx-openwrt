@@ -37,10 +37,6 @@ sed -i "s/2.openwrt.pool.ntp.org/time1.cloud.tencent.com/g" package/base-files/f
 rm -rf package/luci-app-amlogic
 git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 
-# Add luci-app-openclash
-rm -rf package/luci-app-openclash
-git clone --depth=1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-
 # Replace luci-theme-argon
 rm -rf package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
