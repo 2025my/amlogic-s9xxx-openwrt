@@ -43,9 +43,9 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-th
 
 # 添加 FTP 支持（选一个）
 # vsftpd:
+rm -rf temp-luci
 git clone https://github.com/immortalwrt/luci.git temp-luci
 cp -rf temp-luci/applications/luci-app-vsftpd package/luci-app-vsftpd
-rm -rf temp-luci
 
 # AdGuardHome（1.8-11）
 rm -rf package/luci-app-adguardhome
@@ -55,7 +55,6 @@ git clone https://github.com/kenzok8/luci-app-adguardhome.git package/luci-app-a
 rm -rf package/luci-app-msd_lite
 git clone https://github.com/kenzok8/small-package.git
 cp -r small-package/luci-app-msd_lite package/
-rm -rf small-package
 
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
