@@ -20,7 +20,7 @@ echo "DISTRIB_SOURCECODE='official'" >>package/base-files/files/etc/openwrt_rele
 
 # Set default hostname and timezone to China
 sed -i "s/hostname='OpenWrt'/hostname='OpenWrt-China'/g" package/base-files/files/bin/config_generate
-sed -i "s/timezone='UTC'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
+#sed -i "s/timezone='UTC'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
 sed -i "/timezone='CST-8'/a\ \ \ \ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
 # Optional: use domestic NTP servers
